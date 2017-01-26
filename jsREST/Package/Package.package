@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="35a87cdd-c9f1-4a23-b952-6b772508aa4c" solutionId="35a87cdd-c9f1-4a23-b952-6b772508aa4c" resetWebServer="false" sharePointProductVersion="15.0" name="jsREST" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="1e010050-eca7-43a5-a4c0-ad63176ef1af" />
+    <featureReference itemId="7568626d-8919-483d-82a0-61a3cb9b3411" />
+    <featureReference itemId="b606c072-c93f-42f1-940e-cdf6d9af9550" />
+  </features>
+</package>

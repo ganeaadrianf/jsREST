@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Products" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Products" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100ffe765b233ca43fea84e7b3a7bf0771f" Name="ListFieldsContentType">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{a42d428d-ac54-4a84-8991-66f3d27c1b7f}" Name="ProductID" />
+          <FieldRef ID="{3be23b43-3502-460a-beff-e7bac7da1e26}" Name="Category" />
+          <FieldRef ID="{5776d7d2-74f0-4342-bec9-19cc6f196639}" Name="QuantityPerUnit" />
+          <FieldRef ID="{55215189-cfd8-4168-b8eb-fb637ba870eb}" Name="UnitPrice" />
+          <FieldRef ID="{d8085ee0-1944-4e2f-b954-8e417faa2dd1}" Name="UnitsInStock" />
+          <FieldRef ID="{1c252d13-bbcf-488a-9e69-0b14f05162ca}" Name="UnitsOnOrder" />
+          <FieldRef ID="{96a2c15a-8f3a-4ab8-94ab-db7c09cb93c1}" Name="ReorderLevel" />
+          <FieldRef ID="{61a028a6-8673-4eeb-9aba-1cabbede3e01}" Name="Discontinued" />
+        </FieldRefs>
+      </ContentType>
+      <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field Name="ProductID" ID="{a42d428d-ac54-4a84-8991-66f3d27c1b7f}" DisplayName="ProductID" Type="Integer" />
+      <Field Name="Category" ID="{3be23b43-3502-460a-beff-e7bac7da1e26}" DisplayName="Category" Type="Lookup" List="Lists/Categories" ShowField="Title" />
+      <Field Name="QuantityPerUnit" ID="{5776d7d2-74f0-4342-bec9-19cc6f196639}" DisplayName="QuantityPerUnit " Type="Text" />
+      <Field Name="UnitPrice" ID="{55215189-cfd8-4168-b8eb-fb637ba870eb}" DisplayName="UnitPrice " Type="Currency" />
+      <Field Name="UnitsInStock" ID="{d8085ee0-1944-4e2f-b954-8e417faa2dd1}" DisplayName="UnitsInStock" Type="Integer" />
+      <Field Name="UnitsOnOrder" ID="{1c252d13-bbcf-488a-9e69-0b14f05162ca}" DisplayName="UnitsOnOrder" Type="Integer" />
+      <Field Name="ReorderLevel" ID="{96a2c15a-8f3a-4ab8-94ab-db7c09cb93c1}" DisplayName="ReorderLevel" Type="Integer" />
+      <Field Name="Discontinued" ID="{61a028a6-8673-4eeb-9aba-1cabbede3e01}" DisplayName="Discontinued " Type="Boolean" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="Category" />
+          <FieldRef Name="QuantityPerUnit" />
+          <FieldRef Name="UnitPrice" />
+          <FieldRef Name="UnitsInStock" />
+          <FieldRef Name="UnitsOnOrder" />
+          <FieldRef Name="ReorderLevel" />
+          <FieldRef Name="Discontinued" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
