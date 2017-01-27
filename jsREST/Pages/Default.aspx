@@ -34,11 +34,15 @@
             initializing...
         </p>
 
+
+        <input id="btnInspectRequest" type="button" value="Inspect request"/><br />   
         <input id="btnGetLists" type="button" value="Lists"/><br />
         <input id="btnExpandCollections" type="button" value="Expand collections"/><br />
         <input id="btnExpandCategory" type="button" value="Expand beverages"/><br />   
         <input id="btnCreateList" type="button" value="Create list"/><br /> 
-        <input id="btnCreateListItem" type="button" value="Create list item"/><br />       
+        <input id="btnCreateListItem" type="button" value="Create list item"/><br />   
+        <input id="btnUpdateListItem" type="button" value="Update list item"/><br />       
+        <input id="btnRetrieveRemotetWebList" type="button" value="Retrieve list from remote web -WebProxy"/><br />
 
         Go to: <a href="../Lists/AGTasks" target="_blank">AG-Tasks list</a>&nbsp;|&nbsp;<a href="../Lists/Products" target="_blank">Products list</a>&nbsp;|&nbsp;<a href="../Lists/Categories" target="_blank">Categories list</a>
     </div>
