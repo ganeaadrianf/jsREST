@@ -22,12 +22,17 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+    <b style="color: #c00">Testing apps for sharepoint v2</b>
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
-
+    <style>
+        .error {
+            font-weight: bold;
+            color: #c00;
+        }
+    </style>
     <div>
         <p id="message">
             <!-- The following content will be replaced with the user name when you run the app - see App.js -->
@@ -35,14 +40,19 @@
         </p>
 
 
-        <input id="btnInspectRequest" type="button" value="Inspect request"/><br />   
-        <input id="btnGetLists" type="button" value="Lists"/><br />
-        <input id="btnExpandCollections" type="button" value="Expand collections"/><br />
-        <input id="btnExpandCategory" type="button" value="Expand beverages"/><br />   
-        <input id="btnCreateList" type="button" value="Create list"/><br /> 
-        <input id="btnCreateListItem" type="button" value="Create list item"/><br />   
-        <input id="btnUpdateListItem" type="button" value="Update list item"/><br />       
-        <input id="btnRetrieveRemotetWebList" type="button" value="Retrieve list from remote web -WebProxy"/><br />
+        <input id="btnInspectRequest" type="button" value="Inspect request" /><br />
+        <input id="btnGetLists" type="button" value="Lists" /><br />
+        <input id="btnExpandCollections" type="button" value="Expand collections" /><br />
+        <input id="btnExpandCategory" type="button" value="Expand beverages" /><br />
+        <input id="btnCreateList" type="button" value="Create list" /><br />
+        <input id="btnCreateListItem" type="button" value="Create list item" /><br />
+        <input id="btnUpdateListItem" type="button" value="Update list item" /><br />
+        <input id="btnRetrieveRemotetWebList" type="button" value="Retrieve list from remote web -WebProxy(Anonymous services)" /><br />
+        <input id="btnRetrieveRemoteWebListCrossSiteLibrary" type="button" value="Retrieve list from remote web - Cross site library" /><br />
+        <input id="btnCreateLibrary" type="button" value="Create library" /><br />
+        <input type="button" id="btnUploadDocument" value="Upload document to library" />
+        <input type="file" id="btnUploadFile" />
+        <br />
 
         Go to: <a href="../Lists/AGTasks" target="_blank">AG-Tasks list</a>&nbsp;|&nbsp;<a href="../Lists/Products" target="_blank">Products list</a>&nbsp;|&nbsp;<a href="../Lists/Categories" target="_blank">Categories list</a>
     </div>
