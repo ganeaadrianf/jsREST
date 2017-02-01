@@ -52,6 +52,9 @@
         <input id="btnCreateLibrary" type="button" value="Create library" /><br />
         <input type="button" id="btnUploadDocument" value="Upload document to library" />
         <input type="file" id="btnUploadFile" />
+
+        <input id="btnCheckUserPermissions" type="button" value="Check User Permissions" /><br />
+        <input id="btnUserProfileProperties" type="button" value="User profile properties" /><br />
         <br />
 
         Go to: <a href="../Lists/AGTasks" target="_blank">AG-Tasks list</a>&nbsp;|&nbsp;<a href="../Lists/Products" target="_blank">Products list</a>&nbsp;|&nbsp;<a href="../Lists/Categories" target="_blank">Categories list</a>

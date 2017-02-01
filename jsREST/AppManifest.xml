@@ -16,6 +16,7 @@
   </AppPrincipal>
   <AppPermissionRequests AllowAppOnlyPolicy="false" >
     <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="Read" />
+    <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="Read" />
   </AppPermissionRequests>
   <RemoteEndpoints>
     <RemoteEndpoint Url="http://intranet.shpdev.com" />
